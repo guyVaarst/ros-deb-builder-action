@@ -68,7 +68,7 @@ ccache --zero-stats --max-size=10.0G
 
 # allow ccache access from sbuild
 chmod a+X "$HOME" "$HOME/.cache"
-chmod -R a+rwX "$HOME/.cache/ccache"
+sudo chmod -R a+rwX "$HOME/.cache/ccache"
 
 cat << "EOF" > "$HOME/.sbuildrc"
 $build_environment = { "CCACHE_DIR" => "/build/ccache" };
